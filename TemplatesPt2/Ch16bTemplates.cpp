@@ -5,7 +5,8 @@
 #include "SamPersonalLibrary.h"
 
 template <typename T>
-T half(T number);
+T half(T);
+int half(int);
 
 int main()
 {
@@ -24,4 +25,11 @@ template <typename T>
 T half(T number)
 {
     return number / 2;
+}
+
+int half(int number)
+{
+    float num = static_cast<float>(number) / 2;
+    num = ceil(num);
+    return static_cast<int>(num);
 }
